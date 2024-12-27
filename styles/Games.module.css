@@ -1,0 +1,136 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #121212;
+  position: relative;
+}
+
+.nav {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.navLink {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border: 1px solid #333;
+}
+
+.navLink:hover {
+  background-color: #00a3ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 163, 255, 0.3);
+  border-color: #00a3ff;
+}
+
+.main {
+  max-width: 1000px;
+  width: 100%;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.gamesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.gameCard {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gameCard:hover {
+  transform: translateY(-5px);
+  border-color: #00a3ff;
+  box-shadow: 0 8px 16px rgba(0, 163, 255, 0.2);
+}
+
+.gameCard h2 {
+  font-size: 1.8rem;
+  color: #00a3ff;
+  margin-bottom: 1rem;
+}
+
+.gameCard p {
+  font-size: 1.1rem;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .nav {
+    position: static;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+
+  .main {
+    padding: 1rem;
+    margin-top: 0;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .gamesGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .navLink {
+    width: calc(50% - 0.5rem);
+    text-align: center;
+  }
+
+  .gameCard {
+    padding: 1.5rem;
+  }
+
+  .gameCard h2 {
+    font-size: 1.5rem;
+  }
+
+  .gameCard p {
+    font-size: 1rem;
+  }
+} 
